@@ -124,7 +124,7 @@ async function analyzeRepo() {
 
   try {
     setStatus('Fetching repository data...');
-    const res = await fetch('http://localhost:3000/analyze', {
+   const res = await fetch('/analyze', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ owner: parsed.owner, repo: parsed.repo }),
