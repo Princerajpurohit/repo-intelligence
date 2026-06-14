@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "frontend/**",
+      "src": "frontend/index.html",
       "use": "@vercel/static"
     }
   ],
@@ -16,8 +16,16 @@
       "dest": "/api/analyze.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "/frontend/$1"
+      "src": "/style.css",
+      "dest": "/frontend/style.css"
+    },
+    {
+      "src": "/script.js",
+      "dest": "/frontend/script.js"
+    },
+    {
+      "src": "/",
+      "dest": "/frontend/index.html"
     }
   ]
 }
